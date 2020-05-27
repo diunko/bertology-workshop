@@ -1,0 +1,9 @@
+[submodule "vendor/pytorch-lightning"]
+	path = vendor/pytorch-lightning
+	url = git@github.com:PyTorchLightning/pytorch-lightning.git
+[submodule "vendor/transformers"]
+	path = vendor/transformers
+	url = git@github.com:huggingface/transformers.git
+[submodule "vendor/wandb-client"]
+	path = vendor/wandb-client
+	url = git@github.com:wandb/client.git
