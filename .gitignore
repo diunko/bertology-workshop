@@ -108,3 +108,4 @@ ENV/
 .idea
 
 /examples/wandb-tutorial/wandb
+/data
