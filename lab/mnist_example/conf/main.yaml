@@ -1,0 +1,50 @@
+run:
+  seed: null
+  do_train: false
+  do_eval: false
+trainer:
+  default_root_dir: null
+  gradient_clip_val: 0.0
+  process_position: 0
+  num_nodes: 1
+  gpus: null
+  num_tpu_cores: null
+  log_gpu_memory: null
+  progress_bar_refresh_rate: 1
+  overfit_pct: 0.0
+  track_grad_norm: -1
+  check_val_every_n_epoch: 1
+  fast_dev_run: false
+  accumulate_grad_batches: 1
+  max_epochs: 1000
+  min_epochs: 1
+  max_steps: null
+  min_steps: null
+  train_percent_check: 1.0
+  val_percent_check: 1.0
+  test_percent_check: 1.0
+  val_check_interval: 1.0
+  log_save_interval: 100
+  row_log_interval: 10
+  distributed_backend: null
+  precision: 32
+  weights_summary: full
+  weights_save_path: null
+  amp_level: O1
+  num_sanity_val_steps: 5
+  truncated_bptt_steps: null
+  resume_from_checkpoint: null
+  benchmark: false
+  reload_dataloaders_every_epoch: false
+model:
+  data_root: ./datasets
+  epochs: 20
+  batch_size: 2
+
+  drop_prob: 0.57
+  in_features: 784
+  learning_rate: 0.00008
+  out_features: 10
+  hidden_dim: 1000
+  optimizer_name: adam
+

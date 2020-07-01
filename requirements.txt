@@ -1,0 +1,7 @@
+jupyter
+pytorch-lightning
+wandb
+transformers
+nltk
+omegaconf
+torchvision
