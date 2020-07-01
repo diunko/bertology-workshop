@@ -49,7 +49,7 @@ class RunConfig:
     do_eval: bool = False
     do_debug: bool = False
     seed: Optional[int] = None
-    output_dir: str = MISSING
+    output_dir: Optional[str] = None
 
 @dataclass
 class Config:
@@ -65,6 +65,10 @@ def cli():
     config_args: Config = OmegaConf.from_cli()
 
     config: Config = OmegaConf.merge(schema, config_yaml, config_args)
+
+    if config.run.output_dir is None:
+        config.run.output_dir = os.path.join("./results", f"{config.model.task}_{time.strftime('%Y%m%d_%H%M%S')}",)
+        os.makedirs(config.run.output_dir)
 
     print(config.pretty())
 
