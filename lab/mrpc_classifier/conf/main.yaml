@@ -1,0 +1,24 @@
+run:
+  output_dir: './runs'
+trainer:
+  gradient_clip_val: 0
+
+model:
+  model_name_or_path: 'bert-base-cased'
+  config_name: 'bert-base-cased'
+  tokenizer_name: 'bert-base-cased'
+  cache_dir: './.cache'
+
+  learning_rate: 5.0e-05
+  weight_decay: 0.0
+  adam_epsilon: 1.0e-08
+  warmup_steps: 0
+  num_train_epochs: 3
+  train_batch_size: 32
+  eval_batch_size: 32
+
+  mode: sequence-classification
+  max_seq_length: 128
+  overwrite_cache: false
+  data_dir: ./data/glue/MRPC
+
